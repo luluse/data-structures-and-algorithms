@@ -88,16 +88,17 @@ Return the resulting output array.
 const fizzbuzz = (arr) => {
   let output = [];
   arr.forEach(num => {
-    if (Number.isInteger(num / 3) && Number.isInteger(num / 5)){
+    if (num % 15 === 0){
       output.push('Fizz Buzz');
-    } else if (Number.isInteger(num / 3)){
+    } else if (num % 3 === 0){
       output.push('Fizz');
-    } else if (Number.isInteger(num / 5)){
+    } else if (num % 5 === 0){
       output.push('Buzz');
     } else {
       output.push(num);
     }
   });
+  return output;
 };
 
 /* ------------------------------------------------------------------------------------------------
