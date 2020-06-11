@@ -74,15 +74,17 @@ const templatingWithMustache = () => {
   let array = [];
 
   characters.forEach(value =>{
-    let template = `
-    <h2>{{ name }}</h2>
-    <h3>{{ spouse }}</h3>
-    {{#children}}
-    * {{.}}
-    {{/children}}
-    <p>{{ house }}</p>
-    </script>
-  `
+    let template = $('#template').html()
+
+  //   let template = `
+  //   <h2>{{ name }}</h2>
+  //   <h3>{{ spouse }}</h3>
+  //   {{#children}}
+  //   * {{.}}
+  //   {{/children}}
+  //   <p>{{ house }}</p>
+  //   </script>
+  // `
     let toHtml = Mustache.render(template, value);
     array.push(toHtml);
   })
