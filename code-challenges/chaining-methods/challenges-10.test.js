@@ -8,6 +8,9 @@ Build a simple express server. Connect a '/hello' route that sends a greeting of
 
 const createServer = () => {
 
+  const express=require('express');
+  const app=express();
+
   app.get('/hello', (req, res) =>{
     let hello = `Hi, my name is Lulu!`;
     res.status(200).send(hello);
@@ -45,7 +48,9 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  // Solution code here...
+  const newArray = input.reduce((acc, value, index)=>{
+    return acc.concat(value);
+  }, [])
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,7 +85,10 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
+  let newArray = [];
+  input.forEach(value => {
+
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
