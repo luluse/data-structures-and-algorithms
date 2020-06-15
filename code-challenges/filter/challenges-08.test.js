@@ -20,10 +20,7 @@ const createServer = () => {
   return server;
 };
 
-
 function sayHello(request, response){
-  // app.get('/hello', (request, response) => {
-  //   console.log('Hello from the back end');
   response.status(200).send('Hello from the back end');
 }
 
