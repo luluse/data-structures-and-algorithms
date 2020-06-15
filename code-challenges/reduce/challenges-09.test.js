@@ -28,24 +28,6 @@ const createServer = () => {
   // Routes go here
   // Solution code here...
   app.get('/events', getCurrentEvents);
-  
-  function getCurrentEvents(request, response){
-    let evn = request.query.currentEvents;
-    response.status(200).send(mapCurrentEvents);
-  }
-  
-  const mapCurrentEvents = () => {
-    return currentEvents.map(value => new Event(value));
-  }
-  
-  function Event(obj){
-    this.author = obj.author,
-    this.categories = obj.category,
-    this.summary = obj.description,
-    this.img_url = obj.image,
-    this.date = obj.published,
-    this.title = obj.title
-  }
 
   var server = app.listen(3301, function () {
     var port = server.address().port;
@@ -178,6 +160,23 @@ const currentEvents = {
   ]
 }
 
+function getCurrentEvents(request, response){
+  // let evn = request.query.currentEvents;
+  response.status(200).send(mapCurrentEvents());
+}
+
+const mapCurrentEvents = () => currentEvents.news.map(value => new Event(value));
+
+
+function Event(obj){
+  this.author = obj.author;
+  this.categories = obj.category;
+  this.summary = obj.description;
+  this.img_url = obj.image;
+  this.date = obj.published;
+  this.title = obj.title
+}
+
 /*
 ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -261,7 +260,12 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  
+  let array = str.split('');
+  array = array.reduce((newString, currentLetter, index) =>{
+    newString = newString + array[(array.length-1)-index];
+    return newString;
+  }, '');
+  return array;
 };
 
 /* ------------------------------------------------------------------------------------------------
