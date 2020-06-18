@@ -20,7 +20,7 @@ const $ = createSnippetWithJQuery(`
 `);
 
 const fixTheTypo = () => {
-// Solution code here...
+  $('li:contains("Perr")').text('Pear');
 };
 
 /* ------------------------------------------------------------------------------------------------
