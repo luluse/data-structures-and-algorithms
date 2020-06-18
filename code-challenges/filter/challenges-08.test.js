@@ -21,7 +21,7 @@ const createServer = () => {
 };
 
 function sayHello(request, response){
-  response.status(200).send('Hello from the back end');
+  response.status(200).send('Hello from the back-end');
 }
 
 /* ------------------------------------------------------------------------------------------------
