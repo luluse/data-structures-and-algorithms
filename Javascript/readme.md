@@ -5,5 +5,6 @@ Code Challenges 401 Javascript
 
 [Insert Shift Array](./challenges/arrayShift)
 
+[Binary Search Array](./challenges/arrayBinarySearch)
 
 
