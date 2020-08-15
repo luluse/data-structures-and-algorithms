@@ -42,5 +42,23 @@ it('should return true if value exist in the list', () =>{
   const ll = new LinkedList();
   ll.insert('apples');
   ll.insert('bananas');
-  expect('bananas').toBe(true);
+  ll.insert('cucumbers');
+
+  expect('apples').toBe(true);
+})
+
+it('should return false if value does not exist in the list', () =>{
+  const ll = new LinkedList();
+  ll.insert('apples');
+  ll.insert('bananas');
+  ll.insert('cucumbers');
+  expect('blueberries').toBe(false);
+})
+
+it('should return a collection of all values that exist in the list', ()=>{
+  const ll = new LinkedList();
+  ll.insert('a');
+  ll.insert('b');
+  ll.insert('c');
+  expect(ll).toHaveReturned('{ a } -> { b } -> { c } -> NULL');
 })
