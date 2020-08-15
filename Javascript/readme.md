@@ -7,4 +7,4 @@ Code Challenges 401 Javascript
 
 [Binary Search Array](./challenges/arrayBinarySearch)
 
-
+[Linked Lists](./data-structures/linkedList)
