@@ -21,29 +21,11 @@ it('should add to not empty list', ()=>{
   expect(ll.head.next.value).toBe('apples');
 })
 
-it('should append to an empty list', () =>{
-  const ll = new LinkedList();
-  ll.append('apples');
-  expect(ll.head.value).toBe('apples');
-})
-
-it('should append to not an empty list', () =>{
-  const ll = new LinkedList();
-  ll.insert('apples');
-  ll.insert('bananas');
-  ll.append('cucumbers');
-  expect(ll.head.value).toBe('bananas');
-  expect(ll.head.next.value).toBe('apples');
-  expect(ll.head.next.next.value).toBe('cucumbers');
-  expect(ll.head.next.next.next).toBe(null);
-})
-
 it('should return true if value exist in the list', () =>{
   const ll = new LinkedList();
   ll.insert('apples');
   ll.insert('bananas');
   ll.insert('cucumbers');
-
   expect('apples').toBe(true);
 })
 
@@ -62,3 +44,38 @@ it('should return a collection of all values that exist in the list', ()=>{
   ll.insert('c');
   expect(ll).toHaveReturned('{ a } -> { b } -> { c } -> NULL');
 })
+
+it('should append to an empty list', () =>{
+  const ll = new LinkedList();
+  ll.append('apples');
+  expect(ll.head.value).toBe('apples');
+})
+
+it('should append to not an empty list', () =>{
+  const ll = new LinkedList();
+  ll.insert('apples');
+  ll.insert('bananas');
+  ll.append('cucumbers');
+  expect(ll.head.value).toBe('bananas');
+  expect(ll.head.next.value).toBe('apples');
+  expect(ll.head.next.next.value).toBe('cucumbers');
+  expect(ll.head.next.next.next).toBe(null);
+})
+
+it('Should insert a new Node before a given value node', ()=>{
+  const ll = new LinkedList();
+  ll.insert('apples');
+  ll.insert('bananas');
+  ll.insertBefore('apples', 'cherries');
+  expect(ll.head.next.value).toBe('cherries');
+
+})
+
+it('Should insert a new Node after a given value node', ()=>{
+  const ll = new LinkedList();
+  ll.insert('apples');
+  ll.insert('bananas');
+  ll.insertAfter('bananas', 'cherries');
+  expect(ll.head.next.value).toBe('cherries');
+})
+
