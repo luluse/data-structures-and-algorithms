@@ -8,3 +8,7 @@ Code Challenges 401 Javascript
 [Binary Search Array](./challenges/arrayBinarySearch)
 
 [Linked Lists](./data-structures/linkedList)
+
+[Linked Lists insertions](./data-structures/linkedList)
+
+[Linked Lists kth from end](./data-structures/linkedList)

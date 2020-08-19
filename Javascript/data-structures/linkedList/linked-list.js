@@ -60,32 +60,66 @@ class LinkedList{
     currentNode.next = newNode;
   }
 
-  insertBefore(value, newVal){
-    const newNode = new Node(newVal);
+  insertBefore(targetValue, newValue) {
 
-    let currentNode = this.head;
+    if (!this.head) {
+      return;
+    }
 
-    while (currentNode.next !== null){
-      if (currentNode.next.value === value){
-        newNode.next = currentNode.next;
-        currentNode = newNode;
+    if(this.head.value === targetValue) {
+      this.insert(newValue);
+      return;
+    }
+
+    let current = this.head;
+
+    while(current.next) {
+
+      if(current.next.value !== targetValue) {
+        current = current.next;
+      } else {
+        current.next = new Node(newValue, current.next);
+        break;
       }
     }
-    currentNode = currentNode.next;
   }
 
-  insertAfter(value, newVal){
-    let newNode = new Node(newVal);
+  insertAfter(value, key) {
 
-    let currentNode = this.head;
+    if (!this.head) {
+      return;
+    }
 
-    while(currentNode.next !== null){
-      if(currentNode.value === value){
-        newNode = currentNode.next;
-        currentNode = newNode.next;
+    let current = this.head;
+
+    while(current.next) {
+      if (current.value === key) {
+        current.next = new Node(value, current.next);
+        break;
+      }
+      current = current.next;
+    }
+  }
+
+  kthFromEnd(k){
+    let current = this.head;
+    let lengthCurrent = this.head;
+
+    let length = 0;
+
+    while(lengthCurrent !== null){
+      lengthCurrent = lengthCurrent.next;
+      length++;
+    }
+
+    let targetK = length - k;
+
+    for(let i = 1; i <= targetK; i++){
+      current = current.next;
+      if( i===targetK){
+        return current.value;
       }
     }
-    currentNode = currentNode.next;
   }
 
 
