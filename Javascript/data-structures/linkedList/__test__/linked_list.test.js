@@ -88,7 +88,7 @@ it('Should insert before', ()=>{
   expect(list.toString()).toBe('{ bananas } --> { dates } --> { cucumbers } --> { apples } --> NULL');
 });
 
-it.skip('should insert after', () => {
+it('should insert after', () => {
   const list = new LinkedList();
   list.insert('apples');
   list.insert('dates');
