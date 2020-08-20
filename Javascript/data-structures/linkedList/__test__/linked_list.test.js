@@ -7,6 +7,13 @@ it('should instanciate', () =>{
   expect(ll).toBeDefined();
 });
 
+it('should stringify', () => {
+  const list = new LinkedList();
+  list.insert('apples');
+  list.insert('bananas');
+  expect(list.toString()).toBe('{ bananas } -> { apples } -> NULL');
+});
+
 it('shoud add to empty list', ()=>{
   const ll = new LinkedList();
   ll.insert('apples');
@@ -26,7 +33,7 @@ it('should return true if value exist in the list', () =>{
   ll.insert('apples');
   ll.insert('bananas');
   ll.insert('cucumbers');
-  expect('apples').toBe(true);
+  expect(ll.includes('apples')).toStrictEqual(true);
 })
 
 it('should return false if value does not exist in the list', () =>{
@@ -34,7 +41,7 @@ it('should return false if value does not exist in the list', () =>{
   ll.insert('apples');
   ll.insert('bananas');
   ll.insert('cucumbers');
-  expect('blueberries').toBe(false);
+  expect(ll.includes('blueberries')).toStrictEqual(false);
 })
 
 it.skip('should return a collection of all values that exist in the list', ()=>{
@@ -85,7 +92,7 @@ it('Should insert before', ()=>{
   list.insert('dates');
   list.insert('bananas');
   list.insertBefore('apples', 'cucumbers');
-  expect(list.toString()).toBe('{ bananas } --> { dates } --> { cucumbers } --> { apples } --> NULL');
+  expect(list.toString()).toBe('{ bananas } -> { dates } -> { cucumbers } -> { apples } -> NULL');
 });
 
 it('should insert after', () => {
@@ -94,7 +101,7 @@ it('should insert after', () => {
   list.insert('dates');
   list.insert('bananas');
   list.insertAfter('dates', 'cucumbers');
-  expect(list.toString()).toBe('{ bananas } --> { dates } --> { cucumbers } --> { apples } --> NULL');
+  expect(list.toString()).toStrictEqual('{ bananas } -> { dates } -> { cucumbers } -> { apples } -> NULL');
 });
 
 it('Should return K value where k is somewhere in the middle of the linked list', ()=>{
