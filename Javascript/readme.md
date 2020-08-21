@@ -12,3 +12,5 @@ Code Challenges 401 Javascript
 [Linked Lists insertions](./data-structures/linkedList)
 
 [Linked Lists kth from end](./data-structures/linkedList)
+
+[Zip Lists](./challenges/llZip)

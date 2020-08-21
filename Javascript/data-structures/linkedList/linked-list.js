@@ -25,6 +25,8 @@ class LinkedList{
     while (currentNode !== null) {
       if (currentNode.value === value){
         return true;
+      } else {
+        currentNode = currentNode.next;
       }
     }
     return false;
@@ -32,14 +34,17 @@ class LinkedList{
 
   toString(){
 
-    let currentNode = this.head;
-
-    while (currentNode !== null) {
-      console.log(`{ ${currentNode.value} } --> `);
-      currentNode = currentNode.next;
+    if(this.head === null){
+      throw new Error('Linked list empty');
     }
-
-    console.log(`{ ${currentNode.value} } --> NULL`);
+    let st = [];
+    let node = this.head;
+    while (node){
+      st.push('{ ' + node.value + ' }');
+      node = node.next;
+    }
+    st.push('NULL');
+    return st.join(' -> ');
   }
 
 
