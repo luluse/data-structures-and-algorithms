@@ -22,8 +22,17 @@
 - insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
 - insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
 
-## WHITEBOARD
+### WHITEBOARD
 
 ![linked lists inserstions](../../assets/ll-insertions.jpg)
+
+
+## CODE CHALLENGE 07
+
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. 
+
+### WHITEBOARD
+![linked lists kth from end](../../assets/ll-kth-from-end.png)
+
 
 
