@@ -1,5 +1,6 @@
 const Stack = require('../stacks-and-queues.js');
 
+
 it('should be a class', ()=>{
   expect(Stack).toBeDefined();
 });
@@ -7,7 +8,6 @@ it('should be a class', ()=>{
 it('should instantiate an empty stack', () =>{
   const stack = new Stack();
   expect(stack).toBeDefined();
-  //check if empty
 });
 
 it('can successfully push onto a stack', () =>{
@@ -22,16 +22,11 @@ it('can successfully pop off a stack', () =>{
   stack.push('bananas');
   const popped = stack.pop();
   expect(popped).toBe('bananas');
-});
 
-it('can successfully pop off a stack', () =>{
-  const stack = new Stack();
-  stack.push('apples');
-  stack.push('bananas');
-  const popped = stack.pop();
-  expect(popped).toBe('bananas');
+  stack.pop();
   expect(stack.isEmpty()).toBeTruthy();
 });
+
 
 it('should check if is empty', () =>{
   const stack = new Stack();
@@ -51,10 +46,14 @@ it('should not allow pop from emty list', ()=>{
   const stack = new Stack();
 
   expect(()=> stack.pop()).toThrow(RangeError)
+  expect(() => stack.pop()).toThrow('Cannot pop off empty stack');
 })
 
 it('should not allow peek from emty list', ()=>{
   const stack = new Stack();
 
   expect(()=> stack.peek()).toThrow(RangeError);
+  expect(() => stack.peek()).toThrow('Cannot peek empty stack');
 })
+
+
