@@ -16,3 +16,5 @@ Code Challenges 401 Javascript
 [Zip Lists](./challenges/llZip)
 
 [Stack and Queue](./data-structures/stacksAndQueues)
+
+[Queue with Stacks](./challenges/queueWithStacks)
