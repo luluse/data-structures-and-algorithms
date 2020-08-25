@@ -1,51 +1,52 @@
 'use strict';
 
 class Node {
-  constructor(value, next= null){
+  constructor(value){
     this.value = value;
-    this.next = next;
+    this.next = null;
   }
 }
 
 class Stack {
 
   constructor(){
+    this.size = 0;
     this.top = null;
   }
 
+  isEmpty(){
+    // return this.top === 0;
+
+    if(this.top === null){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   peek(){
-    if(this.top.isEmpty()){
+    if (this.top === null){
       throw new RangeError('Cannot peek off empty Stack');
     }
     return this.top.value;
   }
 
   push(value){
-    const node = new Node(value, this.top);
-    node.next = this.top
-    this.top = node;
+    const oldTop = this.top;
+    this.top = new Node(value);
+    this.top.next = oldTop;
   }
 
   pop(){
-    if(this.isEmpty()){
+    if (this.top === null){
       throw new RangeError('Cannot pop off empty Stack');
     }
     let current = this.top;
     this.top = this.top.next;
     current.next = null;
     return current.value;
-    // return this.top.pop();
   }
 
-  isEmpty(){
-    return this.top === 0;
-
-    // if(this.top === 0){
-    //  return true;
-    // } else {
-    //  return false;
-    // }
-  }
 }
 
 
@@ -56,15 +57,23 @@ class Queue{
     this.rear = null;
   }
 
+  isEmpty(){
+    return this.front === null;
+  }
+
   enqueue(value){
     //adds value to back of queue
-    const node = new Node(value, this.rear);
-    rear.next = node
-    rear = node;
+    // const node = new Node(value, this.rear);
+    // rear.next = node
+    // rear = node;
+
+    const oldRear = this.rear;
+    this.rear = new Node(value);
+    this.rear.next = oldRear;
   }
 
   dequeue(){
-    if(this.isEmpty()){
+    if(this.front === null){
       throw new RangeError('Cannot dequeue off empty Queue');
     }
     let current = this.front;
@@ -74,19 +83,14 @@ class Queue{
   }
 
   peek(){
-    if(this.front.isEmpty()){
+    if(this.front === null){
       throw new RangeError('Cannot peek off empty Queue');
     }
     return this.front.value;
   }
 
-  isEmpty(){
-    return this.front === 0;
-  }
-
 }
 
 
-module.exports = Stack;
-module.exports = Queue;
+module.exports = {Stack, Queue, Node};
 
