@@ -1,5 +1,4 @@
-const Queue = require('../stacks-and-queues.js');
-
+const {Queue, Node} = require('../stacks-and-queues.js');
 
 it('should be a class', () => {
   expect(Queue).toBeDefined();
@@ -34,7 +33,7 @@ it('should check if is empty', () =>{
   expect(queue.isEmpty()).toBeTruthy();
 })
 
-it('should check if not is empty', () =>{
+it('should check if not empty', () =>{
   const queue = new Queue();
 
   queue.enqueue('apples');
@@ -46,14 +45,14 @@ it('should not allow pop from emty list', ()=>{
   const queue = new Queue();
 
   expect(()=> queue.dequeue()).toThrow(RangeError)
-  expect(() => queue.dequeue()).toThrow('Cannot pop off empty queue');
+  expect(() => queue.dequeue()).toThrow('Cannot dequeue off empty queue');
 })
 
 it('should not allow peek from emty list', ()=>{
   const queue = new Queue();
 
   expect(()=> queue.peek()).toThrow(RangeError);
-  expect(() => queue.peek()).toThrow('Cannot peek empty queue');
+  expect(() => queue.peek()).toThrow('Cannot peek off empty queue');
 })
 
 
