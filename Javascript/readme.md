@@ -18,3 +18,5 @@ Code Challenges 401 Javascript
 [Stack and Queue](./data-structures/stacksAndQueues)
 
 [Queue with Stacks](./challenges/queueWithStacks)
+
+[Fifo Animal Shelter](./challenges/fifoAnimalShelter)
