@@ -73,41 +73,56 @@ class BinarySearchTree extends BinaryTree {
 
 
   //can use recursive
-// add value into node, add node to right spot
-// put a function inside of method
+  // add value into node, add node to right spot
+  // put a function inside of method
   add(value){
 
+    const newVal = new Node(value);
+    if (this.root === null){
+      this.root = newVal;
+    }else {
+      let current = this.root;
+      while(current){
+
+        if (value < current.value){
+          if (current.left === null){
+            current.left = newVal;
+            break;
+          } else {
+            current = current.left;
+          }
+        } if (value > current.value){
+          if (current.right === null){
+            current.right = newVal;
+            break;
+          } else current = current.right;
+        }
+      }
+    }
   }
 
   contains(value){
-    
+    if(this.root === null){
+      return null;
+    }
+    let current = this.root;
+    let containsVal = false;
+
+    while (current && !containsVal){
+      if (value < current.value){
+        current = current.left;
+      } else if (value > current.value){
+        current = current.right;
+      } else {
+        containsVal = true;
+      }
+    }
+    if (!containsVal){
+      return false;
+    }
+    return current;
   }
 }
-
-
-
-// // construct an array- add the root-value to an array
-// function preOrder(root){
-//   // check for null
-//   if(!root){
-//     return;
-//   }
-
-//   output.push(root.value);
-
-//   // if (root.left){
-//   //   preOrder(root.left);
-//   // }
-
-//   // if (root.right){
-//   //   preOrder(root.right);
-//   // }
-
-//   preOrder(root.left);
-//   preOrder(root.right);
-
-// }
-
 
 
 module.exports = {BinarySearchTree, Node};
