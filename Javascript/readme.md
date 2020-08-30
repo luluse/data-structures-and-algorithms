@@ -20,3 +20,5 @@ Code Challenges 401 Javascript
 [Queue with Stacks](./challenges/queueWithStacks)
 
 [Fifo Animal Shelter](./challenges/fifoAnimalShelter)
+
+[Multi Bracket Validation](./challenges/multiBracketValidation)
