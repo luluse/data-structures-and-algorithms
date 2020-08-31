@@ -66,15 +66,40 @@ class BinaryTree {
     _postOrder(this.root);
     return arr;
   }
+
+  findMaximumValue(){
+
+    let array = [];
+    let max = 0;
+
+    function _preOrder(root){
+
+      if(!root){
+        return;
+      }
+
+      array.push(root.value);
+
+      _preOrder(root.left);
+      _preOrder(root.right);
+    }
+
+    for (let i = 0; i < array.length; i++){
+      if (array[i] >= max){
+        max = array[i];
+        return max;
+      }
+    }
+
+    _preOrder(this.root);
+
+  }
+
 }
 
 
 class BinarySearchTree extends BinaryTree {
 
-
-  //can use recursive
-  // add value into node, add node to right spot
-  // put a function inside of method
   add(value){
 
     const newVal = new Node(value);
@@ -99,7 +124,10 @@ class BinarySearchTree extends BinaryTree {
         }
       }
     }
+
   }
+
+
 
   contains(value){
     if(this.root === null){
