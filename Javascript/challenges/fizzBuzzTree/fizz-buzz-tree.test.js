@@ -3,36 +3,35 @@
 const {BinarySearchTree, Node} = require('../../data-structures/tree/tree');
 
 
-const fizzBuzz = (root) => {
-  
-  if(!root){
+const fizzBuzz = (tree) => {
+  if(!tree){
     throw new Error('cannot FizzBuzz on empty tree');
   }
 
   function recursivefizzBuzz(root){
-    if(root === null){
-      return;
-    }  
-    else if(root.value % 15 === 0 ) {
-      root.value = 'Fizzbuzz';
+    // if(root === null){
+    //   return;
+    // }
+    if(root.value % 15 === 0 ) {
+      root.value = 'FizzBuzz';
     }
-    else if (root.value % 3 === 0) {
+    if(root.value % 3 === 0) {
       root.value = 'Fizz';
     }
-    else if (root.value % 5 === 0) {
-      root.value = 'buzz';
+    if(root.value % 5 === 0) {
+      root.value = 'Buzz';
     } else {
-      root.value = root.value.stringify();
-    } 
+      root.value = root.value.toString();
+    }
     recursivefizzBuzz(root.left);
     recursivefizzBuzz(root.right);
   }
-  recursivefizzBuzz(root);
+  recursivefizzBuzz(tree.root);
 }
 
 
 
-// ------------- TEST ---------- 
+// ------------- TEST -------------
 
 it('fizzBuzz to be defined', ()=>{
   expect(fizzBuzz).toBeDefined();
@@ -43,15 +42,20 @@ it('Should throw error if tree is empty', ()=>{
   expect(fizzBuzz()).toTrowError('cannot FizzBuzz on empty tree');
 });
 
-// function fizzBuzz() {
-
-//   var tree = new BinaryTree();
-
-//   tree.root = new BinaryTree.node('5');
-//   tree.root.left = new BinaryTree.node('10');
-//   tree.root.right = new BinaryTree.node('12');
-//   tree.root.left.left = new BinaryTree.node('3');
-//   tree.root.left.right = new BinaryTree.node('donkey');
-//   tree.root.right.left = new BinaryTree.node('15');
-
-//   return tree;
+it('Should replace by fizz, Buzz, fizzbuzz or string', ()=>{
+  // const tree = new BinarySearchTree();
+  // tree.root = new BinarySearchTree('5');
+  // tree.root.left = new BinarySearchTree('3');
+  // tree.root.right = new BinarySearchTree('15');
+  // tree.root.left.left = new BinarySearchTree('7');
+  const fifteen = new Node(15);
+  const six = new Node(6);
+  const five = new Node(5, fifteen, six);
+  const tree = new BinarySearchTree(five);
+  expect(tree).toBeDefined();
+  console.log('this is my tree', tree);
+  expect(fizzBuzz(five)).toEqual('Buzz');
+  console.log('this should be buzz', five)
+  expect(fizzBuzz(six)).toEqual('Fizz');
+  expect(fizzBuzz(fifteen)).toEqual('FizzBuzz');
+});
