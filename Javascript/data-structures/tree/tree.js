@@ -77,12 +77,17 @@ class BinaryTree {
       if(!root){
         return;
       }
-
+      console.log(root.value);
+      if(root.left){
+        _preOrder(root.left);
+      }
       array.push(root.value);
-
-      _preOrder(root.left);
-      _preOrder(root.right);
+      console.log(array);
+      if(root.right){
+        _preOrder(root.right);
+      }
     }
+    _preOrder(this.root);
 
     for (let i = 0; i < array.length; i++){
       if (array[i] >= max){
@@ -90,8 +95,6 @@ class BinaryTree {
         return max;
       }
     }
-
-    _preOrder(this.root);
 
   }
 
