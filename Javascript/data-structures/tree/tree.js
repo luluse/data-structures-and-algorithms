@@ -98,6 +98,37 @@ class BinaryTree {
 
   }
 
+  breadthFirst(){
+    const output = [];
+    let breadth = new Queue;
+
+    this.front = null;
+    this.rear = null;
+    this.queue =[];
+      
+
+    while (!breadth){
+      let node = breadth.dequeue();
+      if(node.left){
+        breadth.enqueue(node.left)
+      }
+      if(node.right){
+        breadth.enqueue(node.right)
+      }
+      output.push(node.value);
+    }
+
+    function dequeue(){
+      return this.queue.shift();
+    }
+
+    function enqueue(val){
+      
+      this.queue.push(val);
+      this.front = this.queue[0]
+    }
+  }
+
 }
 
 

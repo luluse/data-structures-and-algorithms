@@ -43,19 +43,21 @@ it('Should throw error if tree is empty', ()=>{
 });
 
 it('Should replace by fizz, Buzz, fizzbuzz or string', ()=>{
-  // const tree = new BinarySearchTree();
-  // tree.root = new BinarySearchTree('5');
-  // tree.root.left = new BinarySearchTree('3');
-  // tree.root.right = new BinarySearchTree('15');
-  // tree.root.left.left = new BinarySearchTree('7');
+
   const fifteen = new Node(15);
   const six = new Node(6);
-  const five = new Node(5, fifteen, six);
-  const tree = new BinarySearchTree(five);
+  const five = new Node(5);
+  const eight = new Node(8);
+  const twelve = new Node(12);
+
+  fifteen.left = six;
+  fifteen.right = five;
+  six.left = eight;
+  six.right = twelve;
+
+  const tree = new BinarySearchTree(fifteen);
   expect(tree).toBeDefined();
   console.log('this is my tree', tree);
-  expect(fizzBuzz(tree)).toBe('Buzz', 'FizzBuzz', '6');
-  // console.log('this should be buzz', five)
-  // expect(fizzBuzz(six)).toEqual('Fizz');
-  // expect(fizzBuzz(fifteen)).toEqual('FizzBuzz');
+  expect(fizzBuzz(tree)).toBe('FizzBuzz', 'Fizz', 'Buzz', '8', 'Fizz');
+
 });

@@ -10,6 +10,8 @@
 
 ## Code Challenge 16
 
+**find-maximum-value**
+
 - Write an instance method called find-maximum-value.
 - Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. 
 - You can assume that the values stored in the Binary Tree will be numeric.
@@ -17,6 +19,17 @@
 ### WHITEBOARD
 ![linked lists kth from end](../../assets/findMax.png)
 
+## Code Challenge 18
+
+
+**Breadth-first Traversal**
+
+- Write a breadth first traversal method which takes a Binary Tree as its unique input. W
+- traverse the input tree using a Breadth-first approach
+- return a list of the values in the tree in the order they were encountered.
+
+### WHITEBOARD
+![](../../assets/.png)
 
 
 

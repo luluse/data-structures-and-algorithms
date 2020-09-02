@@ -26,3 +26,7 @@ Code Challenges 401 Javascript
 [Tree](./data-structures/tree)
 
 [Find Max Value](./data-structures/tree)
+
+[FizzBuzz tree](./challenges/fizzBuzz)
+
+[Breadth-first](./data-structures/tree)
