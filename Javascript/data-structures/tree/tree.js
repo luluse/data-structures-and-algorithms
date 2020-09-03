@@ -1,5 +1,7 @@
 'useStrict';
 
+const {Queue} = require('../stacksAndQueues/stacks-and-queues');
+
 class Node {
 
   constructor(value, left=null, right=null){
@@ -102,11 +104,6 @@ class BinaryTree {
     const output = [];
     let breadth = new Queue;
 
-    this.front = null;
-    this.rear = null;
-    this.queue =[];
-      
-
     while (!breadth){
       let node = breadth.dequeue();
       if(node.left){
@@ -118,15 +115,6 @@ class BinaryTree {
       output.push(node.value);
     }
 
-    function dequeue(){
-      return this.queue.shift();
-    }
-
-    function enqueue(val){
-      
-      this.queue.push(val);
-      this.front = this.queue[0]
-    }
   }
 
 }

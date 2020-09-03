@@ -1,9 +1,9 @@
 'use strict';
 
 const {BinarySearchTree, Node} = require('../tree.js');
-const {Queue} = require('../stacks-and-queues.js');
+const {Queue} = require('../../stacksAndQueues/stacks-and-queues');
 
-it('Should replace by fizz, Buzz, fizzbuzz or string', ()=>{
+it('Should return an array in traversal order', ()=>{
 
   const fifteen = new Node(15);
   const six = new Node(6);
@@ -17,8 +17,8 @@ it('Should replace by fizz, Buzz, fizzbuzz or string', ()=>{
   six.right = twelve;
 
   const tree = new BinarySearchTree(fifteen);
-  expect(breadthFirst()).toBeDefined();
+  // expect(breadthFirst()).toBeDefined();
   console.log('this is my tree', tree);
-  // expect(fizzBuzz(tree)).toBe();
+  expect(tree.breadthFirst()).toBe([15, 6, 5, 8, 12]);
 
 });
