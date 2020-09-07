@@ -58,22 +58,27 @@ class Queue{
   }
 
   isEmpty(){
-    return this.front === null;
+    if(!this.front){
+      return true;
+    } else if (this.front.value){
+      return false;
+    }
   }
 
   enqueue(value){
-    //adds value to back of queue
-    // const node = new Node(value, this.rear);
-    // rear.next = node
-    // rear = node;
 
-    const oldRear = this.rear;
-    this.rear = new Node(value);
-    this.rear.next = oldRear;
+    if(this.isEmpty()){
+      this.front = new Node(value, this.front);
+      this.rear = this.front;
+    } else {
+      this.rear.next = new Node(value, this.front);
+      this.rear = this.rear.next;
+    }
+
   }
 
   dequeue(){
-    if(this.front === null){
+    if(this.isEmpty()){
       throw new RangeError('Cannot dequeue off empty Queue');
     }
     let current = this.front;
@@ -83,7 +88,7 @@ class Queue{
   }
 
   peek(){
-    if(this.front === null){
+    if(this.isEmpty()){
       throw new RangeError('Cannot peek off empty Queue');
     }
     return this.front.value;
