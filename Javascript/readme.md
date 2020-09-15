@@ -22,3 +22,11 @@ Code Challenges 401 Javascript
 [Fifo Animal Shelter](./challenges/fifoAnimalShelter)
 
 [Multi Bracket Validation](./challenges/multiBracketValidation)
+
+[Tree](./data-structures/tree)
+
+[Find Max Value](./data-structures/tree)
+
+[FizzBuzz tree](./challenges/fizzBuzz)
+
+[Breadth-first](./data-structures/tree)

@@ -1,5 +1,7 @@
 'useStrict';
 
+const {Queue} = require('../stacksAndQueues/stacks-and-queues');
+
 class Node {
 
   constructor(value, left=null, right=null){
@@ -66,15 +68,60 @@ class BinaryTree {
     _postOrder(this.root);
     return arr;
   }
+
+  findMaximumValue(){
+
+    let array = [];
+    let max = 0;
+
+    function _preOrder(root){
+
+      if(!root){
+        return;
+      }
+      console.log(root.value);
+      if(root.left){
+        _preOrder(root.left);
+      }
+      array.push(root.value);
+      console.log(array);
+      if(root.right){
+        _preOrder(root.right);
+      }
+    }
+    _preOrder(this.root);
+
+    for (let i = 0; i < array.length; i++){
+      if (array[i] >= max){
+        max = array[i];
+        return max;
+      }
+    }
+
+  }
+
+  breadthFirst(){
+    const output = [];
+    let breadth = new Queue;
+
+    while (!breadth){
+      let node = breadth.dequeue();
+      if(node.left){
+        breadth.enqueue(node.left)
+      }
+      if(node.right){
+        breadth.enqueue(node.right)
+      }
+      output.push(node.value);
+    }
+
+  }
+
 }
 
 
 class BinarySearchTree extends BinaryTree {
 
-
-  //can use recursive
-  // add value into node, add node to right spot
-  // put a function inside of method
   add(value){
 
     const newVal = new Node(value);
@@ -99,7 +146,10 @@ class BinarySearchTree extends BinaryTree {
         }
       }
     }
+
   }
+
+
 
   contains(value){
     if(this.root === null){
