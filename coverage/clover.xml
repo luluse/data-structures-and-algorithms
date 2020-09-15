@@ -1,49 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1599449335953" clover="3.2.0">
-  <project timestamp="1599449335953" name="All files">
-    <metrics statements="40" coveredstatements="20" conditionals="16" coveredconditionals="6" methods="11" coveredmethods="6" elements="67" coveredelements="32" complexity="0" loc="40" ncloc="40" packages="1" files="1" classes="1"/>
-    <file name="stacks-and-queues.js" path="/Users/lulu/Documents/cf/401/data-structures-and-algorithms/Javascript/data-structures/stacksAndQueues/stacks-and-queues.js">
-      <metrics statements="40" coveredstatements="20" conditionals="16" coveredconditionals="6" methods="11" coveredmethods="6"/>
-      <line num="5" count="4" type="stmt"/>
-      <line num="6" count="4" type="stmt"/>
-      <line num="13" count="7" type="stmt"/>
-      <line num="14" count="7" type="stmt"/>
-      <line num="20" count="3" type="cond" truecount="2" falsecount="0"/>
-      <line num="21" count="2" type="stmt"/>
-      <line num="23" count="1" type="stmt"/>
-      <line num="28" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="29" count="1" type="stmt"/>
-      <line num="31" count="1" type="stmt"/>
-      <line num="35" count="4" type="stmt"/>
-      <line num="36" count="4" type="stmt"/>
-      <line num="37" count="4" type="stmt"/>
-      <line num="41" count="3" type="cond" truecount="2" falsecount="0"/>
-      <line num="42" count="1" type="stmt"/>
-      <line num="44" count="2" type="stmt"/>
-      <line num="45" count="2" type="stmt"/>
-      <line num="46" count="2" type="stmt"/>
-      <line num="47" count="2" type="stmt"/>
-      <line num="56" count="0" type="stmt"/>
-      <line num="57" count="0" type="stmt"/>
-      <line num="61" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="62" count="0" type="stmt"/>
-      <line num="63" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="64" count="0" type="stmt"/>
-      <line num="70" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="71" count="0" type="stmt"/>
-      <line num="72" count="0" type="stmt"/>
-      <line num="74" count="0" type="stmt"/>
-      <line num="75" count="0" type="stmt"/>
-      <line num="81" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="82" count="0" type="stmt"/>
-      <line num="84" count="0" type="stmt"/>
-      <line num="85" count="0" type="stmt"/>
-      <line num="86" count="0" type="stmt"/>
-      <line num="87" count="0" type="stmt"/>
-      <line num="91" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="92" count="0" type="stmt"/>
-      <line num="94" count="0" type="stmt"/>
-      <line num="100" count="2" type="stmt"/>
-    </file>
+<coverage generated="1600140915232" clover="3.2.0">
+  <project timestamp="1600140915232" name="All files">
+    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
   </project>
 </coverage>
