@@ -30,3 +30,5 @@ Code Challenges 401 Javascript
 [FizzBuzz tree](./challenges/fizzBuzz)
 
 [Breadth-first](./data-structures/tree)
+
+[Insertion Sort](./challenges/insertionSort)
