@@ -32,3 +32,5 @@ Code Challenges 401 Javascript
 [Breadth-first](./data-structures/tree)
 
 [Insertion Sort](./challenges/insertionSort)
+
+[Merge Sort](./challenges/mergeSort)
