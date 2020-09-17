@@ -34,3 +34,5 @@ Code Challenges 401 Javascript
 [Insertion Sort](./challenges/insertionSort)
 
 [Merge Sort](./challenges/mergeSort)
+
+[Quick Sort](./challenges/quickSort)
