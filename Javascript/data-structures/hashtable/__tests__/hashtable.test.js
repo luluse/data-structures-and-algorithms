@@ -36,6 +36,14 @@ it ('should return null for a key that does not exist', ()=>{
   expect(value).toBe(null);
 });
 
+it ('should return false if key is not contained in hashtable', ()=>{
+
+  const table = new Hashtable();
+
+  const value = table.contains('oranges');
+  expect(value).toBe(false);
+});
+
 // const table = new Hashtable(256);
 // const index = table.hash('foobar');
 // // assert (index < 256 && index >= 0)
