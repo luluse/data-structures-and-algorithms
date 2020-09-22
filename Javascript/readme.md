@@ -36,3 +36,7 @@ Code Challenges 401 Javascript
 [Merge Sort](./challenges/mergeSort)
 
 [Quick Sort](./challenges/quickSort)
+
+[Hashtable](./data-structures/hashtable)
+
+[Repeated Word](./challenges/repeatedWord)

@@ -38,11 +38,11 @@ class Hashtable{
   contains(key){
     const index = this.hash(key);
 
-    if(this.buckets[index] = undefined){
+    if(this.buckets[index] === undefined){
       return false;
     }
 
-    return true; 
+    return true;
   }
 
   hash(key){
