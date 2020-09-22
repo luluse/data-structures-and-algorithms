@@ -40,3 +40,5 @@ Code Challenges 401 Javascript
 [Hashtable](./data-structures/hashtable)
 
 [Repeated Word](./challenges/repeatedWord)
+
+[tree intersection](./challenges/treeIntersection)
