@@ -42,3 +42,5 @@ Code Challenges 401 Javascript
 [Repeated Word](./challenges/repeatedWord)
 
 [tree intersection](./challenges/treeIntersection)
+
+[Left Join](./challenges/leftJoin)
