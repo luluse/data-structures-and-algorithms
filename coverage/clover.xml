@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1601435960783" clover="3.2.0">
-  <project timestamp="1601435960783" name="All files">
-    <metrics statements="62" coveredstatements="25" conditionals="19" coveredconditionals="3" methods="20" coveredmethods="9" elements="101" coveredelements="37" complexity="0" loc="62" ncloc="62" packages="2" files="2" classes="2"/>
+<coverage generated="1601505484212" clover="3.2.0">
+  <project timestamp="1601505484212" name="All files">
+    <metrics statements="62" coveredstatements="16" conditionals="19" coveredconditionals="1" methods="20" coveredmethods="5" elements="101" coveredelements="22" complexity="0" loc="62" ncloc="62" packages="2" files="2" classes="2"/>
     <package name="graph">
       <metrics statements="22" coveredstatements="15" conditionals="3" coveredconditionals="1" methods="9" coveredmethods="5"/>
       <file name="graph.js" path="/Users/lulu/Documents/cf/401/data-structures-and-algorithms/Javascript/data-structures/graph/graph.js">
         <metrics statements="22" coveredstatements="15" conditionals="3" coveredconditionals="1" methods="9" coveredmethods="5"/>
-        <line num="5" count="6" type="stmt"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="13" count="6" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
+        <line num="13" count="9" type="stmt"/>
+        <line num="14" count="9" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
-        <line num="30" count="6" type="stmt"/>
-        <line num="31" count="6" type="stmt"/>
-        <line num="32" count="6" type="stmt"/>
-        <line num="40" count="6" type="stmt"/>
-        <line num="41" count="6" type="stmt"/>
-        <line num="43" count="6" type="stmt"/>
-        <line num="44" count="6" type="stmt"/>
+        <line num="30" count="8" type="stmt"/>
+        <line num="31" count="8" type="stmt"/>
+        <line num="32" count="8" type="stmt"/>
+        <line num="40" count="9" type="stmt"/>
+        <line num="41" count="9" type="stmt"/>
+        <line num="43" count="9" type="stmt"/>
+        <line num="44" count="9" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
         <line num="58" count="0" type="stmt"/>
@@ -31,11 +31,11 @@
       </file>
     </package>
     <package name="stacksAndQueues">
-      <metrics statements="40" coveredstatements="10" conditionals="16" coveredconditionals="2" methods="11" coveredmethods="4"/>
+      <metrics statements="40" coveredstatements="1" conditionals="16" coveredconditionals="0" methods="11" coveredmethods="0"/>
       <file name="stacks-and-queues.js" path="/Users/lulu/Documents/cf/401/data-structures-and-algorithms/Javascript/data-structures/stacksAndQueues/stacks-and-queues.js">
-        <metrics statements="40" coveredstatements="10" conditionals="16" coveredconditionals="2" methods="11" coveredmethods="4"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
+        <metrics statements="40" coveredstatements="1" conditionals="16" coveredconditionals="0" methods="11" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -53,15 +53,15 @@
         <line num="45" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
         <line num="47" count="0" type="stmt"/>
-        <line num="56" count="1" type="stmt"/>
-        <line num="57" count="1" type="stmt"/>
-        <line num="61" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="62" count="1" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="61" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="62" count="0" type="stmt"/>
         <line num="63" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="64" count="0" type="stmt"/>
-        <line num="70" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="71" count="1" type="stmt"/>
-        <line num="72" count="1" type="stmt"/>
+        <line num="70" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
         <line num="74" count="0" type="stmt"/>
         <line num="75" count="0" type="stmt"/>
         <line num="81" count="0" type="cond" truecount="0" falsecount="2"/>

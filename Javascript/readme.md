@@ -49,4 +49,6 @@ Code Challenges 401 Javascript
 
 [Breadth-first Graph](./challenges/breadthFirst)
 
-[Get Edges](./challenges/getEdge)
+[Get Edges Graph](./challenges/getEdge)
+
+[Depht First traversal Graph ](./challenges/depthFirst)
