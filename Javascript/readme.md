@@ -49,3 +49,4 @@ Code Challenges 401 Javascript
 
 [Breadth-first Graph](./challenges/breadthFirst)
 
+[Get Edges](./challenges/getEdge)
