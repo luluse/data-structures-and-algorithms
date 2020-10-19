@@ -37,6 +37,19 @@ Code Challenges 401 Javascript
 
 [Quick Sort](./challenges/quickSort)
 
-[Hash Table](./data.structures/hashtable)
+[Hashtable](./data-structures/hashtable)
 
-[]()
+[Repeated Word](./challenges/repeatedWord)
+
+[tree intersection](./challenges/treeIntersection)
+
+[Left Join](./challenges/leftJoin)
+
+[Graphs](./data-structures/graph)
+
+[Breadth-first Graph](./challenges/breadthFirst)
+
+[Get Edges Graph](./challenges/getEdge)
+
+[Depht First traversal Graph ](./challenges/depthFirst)
+
