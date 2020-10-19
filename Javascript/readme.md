@@ -30,3 +30,25 @@ Code Challenges 401 Javascript
 [FizzBuzz tree](./challenges/fizzBuzz)
 
 [Breadth-first](./data-structures/tree)
+
+[Insertion Sort](./challenges/insertionSort)
+
+[Merge Sort](./challenges/mergeSort)
+
+[Quick Sort](./challenges/quickSort)
+
+[Hashtable](./data-structures/hashtable)
+
+[Repeated Word](./challenges/repeatedWord)
+
+[tree intersection](./challenges/treeIntersection)
+
+[Left Join](./challenges/leftJoin)
+
+[Graphs](./data-structures/graph)
+
+[Breadth-first Graph](./challenges/breadthFirst)
+
+[Get Edges Graph](./challenges/getEdge)
+
+[Depht First traversal Graph ](./challenges/depthFirst)
